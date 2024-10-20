@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Soil Moisture Content</title>
+    <link rel="stylesheet" href="pl.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">IOT PROJECT</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#upload">Upload Data</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation"></button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container" data-aos="fade-up">
+            <h1>Soil Moisture Analytics for Precision Agriculture</h1>
+            <p>Monitor, analyze, and improve soil health with real-time data insights.</p>
+            <a href="#upload" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="upload" class="upload-section" data-aos="fade-up">
+        <div class="container">
+            <h2>Upload Your Soil Moisture Data</h2>
+            <input type="file" id="fileInput" accept=".csv">
+            <button class="btn upload-btn" onclick="handleFile()">Upload and Visualize</button>
+
+            <!-- Stylish Chart Container with Center Alignment -->
+            <div class="chart-container" data-aos="zoom-in">
+                <canvas id="soilChart"></canvas>
+            </div>
+
+            <!-- Stylish Table for showing uploaded dataset -->
+            <div class="table-container">
+                <h3>Uploaded Dataset:</h3>
+                <table id="dataTable" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Soil Moisture (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section" data-aos="fade-left">
+        <div class="container">
+            <h2>About IOT PROJECT</h2>
+            <p>The objective is to create a soil moisture monitoring system that automatically waters plants when the soil becomes too dry</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 MdAkram. All Rights Reserved. | <a href="#">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
